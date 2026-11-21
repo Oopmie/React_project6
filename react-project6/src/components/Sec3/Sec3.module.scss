@@ -1,0 +1,161 @@
+@use '../style_layout.scss' as st;
+
+.sec3 {
+    @include st.full_slide;
+    background-color: var(--bg-pink-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        width: 75%;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .titleRow {
+            @include st.df_row(auto, 100%);
+            gap: 2vw;
+            margin-bottom: 2vh;
+
+            .dashedLine {
+                flex: 1;
+                border-top: 2px dashed #A89FA8;
+            }
+
+            h2 {
+                font-size: 38px;
+                font-weight: 800;
+                background: linear-gradient(90deg, var(--purple-gradient-light), var(--purple-gradient-dark));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .seeAll {
+            align-self: flex-end;
+            font-size: 22px;
+            font-weight: 500;
+            color: #E35050;
+            text-decoration: none;
+            margin-bottom: 2.5vh;
+            transition: opacity 0.2s ease;
+
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+
+        .cardsSwiper {
+            width: 100%;
+            padding: 10px 10px 55px 10px;
+
+            :global(.swiper-pagination) {
+                bottom: 5px;
+            }
+
+            :global(.swiper-pagination-bullet) {
+                width: 12px;
+                height: 12px;
+                background-color: #D8BFD8;
+                opacity: 1;
+            }
+
+            :global(.swiper-pagination-bullet-active) {
+                background-color: var(--purple-text);
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 18px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            transition: transform 0.2s ease;
+
+            .imgBox {
+                position: relative;
+                width: 100%;
+                height: 24vh;
+                border-radius: 10px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .likeBtn {
+                    position: absolute;
+                    top: 12px;
+                    right: 12px;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: transform 0.2s ease;
+
+                    &:hover {
+                        transform: scale(1.15);
+                    }
+
+                    img {
+                        width: 22px;
+                        height: 22px;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5vh;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: var(--text-gray);
+                }
+
+                p {
+                    font-size: 15px;
+                    line-height: 1.5;
+                    color: #6B5E68;
+                }
+
+                .bottomRow {
+                    @include st.df_row(auto, 100%);
+                    margin-top: 2vh;
+
+                    span {
+                        font-size: 30px;
+                        font-weight: 600;
+                        color: var(--text-gray);
+                    }
+
+                    .cartBtn {
+                        background: linear-gradient(90deg, var(--purple-gradient-light), var(--purple-gradient-dark));
+                        color: var(--white);
+                        border: none;
+                        border-radius: 8px;
+                        padding: 10px 22px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: opacity 0.2s ease;
+                    }
+                }
+            }
+        }
+    }
+}

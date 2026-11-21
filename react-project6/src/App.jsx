@@ -5,6 +5,9 @@ import 'swiper/css/effect-cube';
 
 import Sec1 from './components/Sec1/Sec1.jsx';
 import Sec2 from './components/Sec2/Sec2.jsx';
+import Sec3 from './components/Sec3/Sec3.jsx';
+import Sec4 from './components/Sec4/Sec4.jsx';
+
 import './App.css';
 
 export default function App() {
@@ -31,6 +34,14 @@ export default function App() {
 
                 <SwiperSlide>
                     <Sec2 />
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Sec3 />
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Sec4 />
                 </SwiperSlide>
 
 
