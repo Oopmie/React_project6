@@ -13,6 +13,8 @@ import best2 from "../src/assets/best2.png"
 import best3 from "../src/assets/best3.png"
 import best4 from "../src/assets/best4.png"
 import best5 from "../src/assets/best5.png"
+import cust1 from "../src/assets/cust1.png"
+import cust2 from "../src/assets/cust2.png"
 
 export const Photos = {
     heart:heart,
@@ -30,4 +32,6 @@ export const Photos = {
     best3:best3,
     best4:best4,
     best5:best5,
+    cust1:cust1,
+    cust2:cust2
 }

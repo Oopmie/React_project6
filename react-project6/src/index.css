@@ -14,3 +14,8 @@ html, body {
   height: 100vh;
   overflow: hidden;
 }
+
+.mySwiper > .swiper-wrapper > .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
+  visibility: hidden !important;
+  pointer-events: none;
+}

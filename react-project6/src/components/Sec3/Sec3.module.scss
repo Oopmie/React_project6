@@ -122,15 +122,15 @@
                 gap: 1.5vh;
 
                 h3 {
-                    font-size: 20px;
+                    font-size: 25px;
                     font-weight: 700;
                     color: var(--text-gray);
                 }
 
                 p {
-                    font-size: 15px;
+                    font-size: 22px;
                     line-height: 1.5;
-                    color: #6B5E68;
+                    color: var(--text-gray);
                 }
 
                 .bottomRow {
@@ -153,6 +153,7 @@
                         font-weight: 500;
                         cursor: pointer;
                         transition: opacity 0.2s ease;
+
                     }
                 }
             }

@@ -1,0 +1,100 @@
+@use '../style_layout.scss' as st;
+
+.sec5 {
+    @include st.full_slide;
+    background-color: var(--bg-pink-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        width: 75%;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .titleRow {
+            @include st.df_row(auto, 100%);
+            gap: 2vw;
+            margin-bottom: 6vh;
+
+            .dashedLine {
+                flex: 1;
+                border-top: 2px dashed #A89FA8;
+            }
+
+            h2 {
+                font-size: 38px;
+                font-weight: 800;
+                background: linear-gradient(90deg, var(--purple-gradient-light), var(--purple-gradient-dark));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .cardsSwiper {
+            width: 100%;
+            padding: 10px 10px 65px 10px;
+
+            :global(.swiper-pagination) {
+                bottom: 5px;
+            }
+
+            :global(.swiper-pagination-bullet) {
+                width: 12px;
+                height: 12px;
+                background-color: #D8BFD8;
+                opacity: 1;
+            }
+
+            :global(.swiper-pagination-bullet-active) {
+                background-color: var(--purple-text);
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 4vh 3vw;
+            border-bottom: 4px solid #FF9AE996;
+            box-shadow: 0px 12px 30px rgba(206, 68, 228, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 3vh;
+            transition: transform 0.2s ease;
+
+            .userRow {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1.5vw;
+
+                .userInfo {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+
+                    h3 {
+                        font-size: 24px;
+                        font-weight: 700;
+                        color: var(--text-gray);
+                    }
+
+                    span {
+                        font-size: 16px;
+                        color: #6B5E68;
+                    }
+                }
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 1.6;
+                color: var(--text-gray);
+            }
+        }
+    }
+}

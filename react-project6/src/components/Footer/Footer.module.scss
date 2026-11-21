@@ -1,0 +1,84 @@
+@use '../style_layout.scss' as st;
+
+.footer {
+    @include st.full_slide;
+    background-color: var(--bg-pink-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        @include st.df_row(auto, 75%);
+        align-items: flex-start;
+
+        .left_cont {
+            width: 38%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3vh;
+
+            .logo {
+                font-size: 45px;
+                font-weight: 700;
+                color: var(--purple-text);
+                text-decoration: none;
+            }
+
+            p {
+                font-size: 22px;
+                line-height: 1.6;
+                color: var(--text-gray);
+            }
+
+            .links {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-top: 1vh;
+
+                img {
+                    filter: grayscale(100%) opacity(0.55);
+                    cursor: pointer;
+                    transition: filter 0.2s ease;
+
+                    &:hover {
+                        filter: none;
+                    }
+                }
+            }
+        }
+
+        .right_cont {
+            width: 45%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                gap: 2.2vh;
+
+                h3 {
+                    font-size: 25px;
+                    font-weight: 700;
+                    color: var(--text-gray);
+                    margin-bottom: 1vh;
+                }
+
+                a {
+                    font-size: 22px;
+                    font-weight: 400;
+                    color: var(--text-gray);
+                    text-decoration: none;
+                    transition: color 0.2s ease;
+
+                    &:hover {
+                        color: var(--purple-text);
+                    }
+                }
+            }
+        }
+    }
+}
