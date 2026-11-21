@@ -1,0 +1,71 @@
+@use '../style_layout.scss' as st;
+
+.sec1 {
+    @include st.full_slide;
+    background: linear-gradient(180deg, var(--bg-pink-light) 0%, var(--bg-pink) 160%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container {
+        @include st.df_row(86vh, 75%);
+
+        .left_cont {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4vh;
+
+            h1 {
+                font-size: 60px;
+                font-weight: 800;
+                line-height: 1.2;
+                background: linear-gradient(90deg, var(--purple-gradient-light), var(--purple-gradient-dark));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            p {
+                font-size: 22px;
+                line-height: 1.6;
+                color: var(--text-gray);
+            }
+
+            .shopBtn {
+                background: var(--purple-gradient-light);
+                color: var(--white);
+                border: none;
+                border-radius: 10px;
+                padding: 14px 34px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+
+                &:hover{
+                    background-color: var(--purple-gradient-dark);
+                }
+            }
+
+            .links {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-top: 10px;
+            }
+        }
+
+        img {
+            width: 70%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    .str {
+        position: relative;
+        width: 3vw;
+        margin-bottom: 7vh;
+    }
+}

@@ -1,0 +1,23 @@
+:root {
+    --bg-pink: #FFBABAF2;
+    --bg-pink-light: #FFF5F8;
+    --purple-text: #CE44E4;
+    --purple-gradient-light: #81008C;
+    --purple-gradient-dark: #540096;
+    --text-gray: #282828;
+    --white: #FFFFFF;
+}
+
+@mixin df_row($height, $width) {
+    height: $height;
+    width: $width;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin full_slide {
+    width: 100%;
+    height: 100vh;
+}
